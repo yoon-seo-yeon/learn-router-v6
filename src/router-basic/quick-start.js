@@ -10,6 +10,7 @@ import {
 const Home = props => <h2>Home</h2>
 const About = props => <h2>About</h2>
 const Users = props => <h2>Users</h2>
+const Hello = props => <h2>Hello</h2>
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     </li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/users">Users</Link></li>
+                    <li><Link to="/hello">Hello</Link></li>
                 </ul>
             </nav>
             {/*
@@ -54,6 +56,8 @@ function App() {
     <Route path="/about" element={<About />} />
     <Route path="/users" element={<Users />} />
     <Route path="/" element={<Home />} />
+    {/* <Route path="/hello" element={<div>Hello!</div>} /> */}
+    <Route path="/hello" element={<Hello />} />
     </Routes>
     </div>
     </Router>
