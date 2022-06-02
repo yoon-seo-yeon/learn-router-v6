@@ -16,8 +16,13 @@ const Courses = (props) => {
             <p>{location.pathname}</p>
             <p>{location.search}</p>
             <p>{location.hash}</p>
+            <p>{location.state.fromDashboard}</p>
+            <p>{location.hash}</p>
             {/* state 객체를 통해서 추가 정보 접근 가능 */}
             <p>{location.state.fromDashboard.toString()}</p>
+            <p>{location.state.hello}</p>
+            <p>{location.state.user.name}</p>
+            <p>{location.state.user.age}</p>
         </div>
     )
 }
@@ -36,7 +41,9 @@ function App() {
                     hash: "#the-hash", // 필요한 경우 fragment 전달
                 }}
                 state={{ 
-                    fromDashboard: true // 필요한 경우 state 속성을 통해서 추가 정보를 객체 형태로 전달 가능
+                    fromDashboard: true, // 필요한 경우 state 속성을 통해서 추가 정보를 객체 형태로 전달 가능
+                    hello : "world",
+                    user : {name : "윤서연", age : 19}
                 }}
             >Courses</Link><br />
 
