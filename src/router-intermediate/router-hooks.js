@@ -70,6 +70,11 @@ function UseNavigateStudyComponent(props) {
     )
 }
 
+function CommentDetail(props) {
+    const params = useParams()
+    return <div>{params.blogId}번 글의 {params.commentId}번 코멘트</div>
+}
+
 function App() {
     return (
         <Router>
@@ -77,11 +82,14 @@ function App() {
             <Link to="/params/1234">With ID Param (1234)</Link><br />
             <Link to="/params/5678">With ID Param (5678)</Link><br />
             <Link to="/navigate">Navigate</Link><br />
+            <Link to="/blogs/1/comments/100">1번 글의 100번 코멘트</Link><br/>
+            <Link to="/blogs/100/comments/3">100번 글의 3번 코멘트</Link><br/>
 
             <Routes>
                 <Route path="/hello/world" element={<UseLocationStudyComponent />}></Route>
                 <Route path="/params/:id" element={<UseParamsStudyComponent />}></Route>
                 <Route path="/navigate" element={<UseNavigateStudyComponent />}></Route>
+                <Route path="/blogs" element={<CommentDetail />}></Route>
             </Routes>
         </Router>
     )
