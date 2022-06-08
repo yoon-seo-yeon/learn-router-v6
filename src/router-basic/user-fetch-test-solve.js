@@ -54,6 +54,8 @@ function UserList(props) {
             })
         }
     </div>
+
+    return userList;
 }
 
 function App(props) {
@@ -61,6 +63,8 @@ function App(props) {
         {/* <Link to = "/users/1">1번 유저</Link><br/>
         <Link to = "/users/2">2번 유저</Link><br/>
         <Link to = "/users/3">3번 유저</Link><br/> */}
+
+        <div>항상 모든 경로에서 보여줘야 할 공통 컴포넌트</div>
 
         <Routes>
             //<Route path = "/" element={<UserList/>}/>
